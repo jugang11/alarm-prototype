@@ -39,6 +39,8 @@ const AlarmApp = () => {
       excludeHolidays: false,
       alarms: [
         { id: 1, time: '10:30', enabled: true },
+        { id: 2, time: '10:35', enabled: true },
+        { id: 3, time: '10:40', enabled: true },
       ]
     },
     {
@@ -50,6 +52,7 @@ const AlarmApp = () => {
       excludeHolidays: true,
       alarms: [
         { id: 1, time: '06:00', enabled: false },
+        { id: 2, time: '06:05', enabled: false }
       ]
     }
   ]);
@@ -650,17 +653,6 @@ const AlarmApp = () => {
                       {day}
                     </span>
                   ))}
-                  {group.alarms.length > 1 && (
-                    <span style={{
-                      fontSize: '12px',
-                      padding: '4px 10px',
-                      background: 'rgba(99,102,241,0.2)',
-                      borderRadius: '6px',
-                      color: '#818cf8'
-                    }}>
-                      +{group.alarms.length - 1}개 알람
-                    </span>
-                  )}
                 </div>
               </div>
             </div>
